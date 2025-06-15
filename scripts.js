@@ -1,0 +1,1 @@
+// Future interactivity or Stripe integration placeholder
