@@ -1,0 +1,11 @@
+{
+  "name": "my-jersey-store",
+  "version": "1.0.0",
+  "description": "Static responsive website for a premium jersey store",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

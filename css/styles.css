@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #d1ffe9;
+  color: #000;
+}
+
+header {
+  background: #0d067c;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.hero {
+  background: #5ceea7;
+  padding: 2em;
+  text-align: center;
+}
+
+.filters, .product-grid, .product-detail, .contact-form, .faq, .reviews {
+  padding: 20px;
+}
+
+.zoomable {
+  transition: transform 0.3s;
+}
+
+.zoomable:hover {
+  transform: scale(1.1);
+}
