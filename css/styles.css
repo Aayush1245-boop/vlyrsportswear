@@ -1,39 +1,65 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  background-color: #d1ffe9;
-  color: #000;
+:root {
+  --primary: #393f4d;
+  --secondary: #1d1e22;
+  --background: #E6E6DF;
+  --surface: #FFFFFF;
+  --text: #1d1e22;
 }
 
-header {
-  background: #0d067c;
-  color: white;
-  padding: 10px 20px;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Open Sans', sans-serif; }
+body { background: var(--background); color: var(--text); }
+a { color: var(--text); text-decoration: none; }
 
-.logo {
-  height: 40px;
+.navbar {
+  position: sticky; top:0;
+  display: flex; align-items: center;
+  background: var(--secondary); color: var(--surface);
+  padding: 1rem;
 }
-
+.navbar .logo { font-size:1.5rem; font-weight:bold; }
+.navbar .nav-toggle { display:none; background:none; border:none; color:var(--surface); font-size:1.5rem; margin-left:auto; }
 .nav-links {
-  display: flex;
-  gap: 15px;
+  list-style:none; display:flex; gap:1.5rem; margin-left:auto;
+}
+.nav-links a {
+  position:relative; padding:0.5rem 0;
+}
+.nav-links a::after {
+  content:""; position:absolute; bottom:0; left:0; width:0; height:2px;
+  background: var(--surface); transition:width .3s;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { width:100%; }
+
+@media (max-width:768px){
+  .nav-toggle { display:block; }
+  .nav-links {
+    position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; background:var(--secondary);
+    display:none;
+  }
+  .nav-links.active { display:flex; }
 }
 
+/* Basic page styling */
+.page { padding:2rem; }
 .hero {
-  background: #5ceea7;
-  padding: 2em;
-  text-align: center;
+  height:60vh; background: var(--primary) url('../assets/images/jersey1.jpg') center/cover;
+  display:flex; align-items:center; justify-content:center;
+}
+.hero h1 {
+  color: var(--surface); font-size:2.5rem;
+  padding:0.5rem 1rem; background:rgba(0,0,0,0.3); border-radius:4px;
 }
 
-.filters, .product-grid, .product-detail, .contact-form, .faq, .reviews {
-  padding: 20px;
+.grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem;
+}
+.card {
+  background: var(--surface); padding:1rem; border-radius:4px;
 }
 
-.zoomable {
-  transition: transform 0.3s;
-}
-
-.zoomable:hover {
-  transform: scale(1.1);
+footer {
+  background: var(--secondary); color: var(--surface);
+  text-align:center; padding:1rem; margin-top:2rem;
 }

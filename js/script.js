@@ -1,3 +1,7 @@
-document.getElementById('nav-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('show');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  toggle?.addEventListener("click", () => {
+    links.classList.toggle("active");
+  });
 });
