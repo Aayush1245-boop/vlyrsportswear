@@ -1,104 +1,102 @@
 
 body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #fff;
+    margin: 0;
+    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
+    background: white;
 }
 
 header {
-  background: linear-gradient(45deg, #0A0A0A 50%, #616161 50%);
-  color: white;
-  padding: 20px;
+    background: linear-gradient(45deg, #1a1a1a 50%, #585858 50%);
+    color: #fff;
+    padding: 20px;
 }
 
 .header-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.logo {
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
+h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-.vlyr {
-  color: white;
-  font-weight: bold;
+.brand-bold {
+    font-weight: 600;
+    color: white;
 }
 
-.sportswear {
-  color: #D4C29A;
-  margin-left: 5px;
+.brand-light {
+    font-weight: 400;
+    color: #ccc2a7;
 }
 
-.nav-links {
-  flex-grow: 1;
-  text-align: center;
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
 }
 
-.nav-links a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+nav ul li {
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #D4C29A;
-  letter-spacing: 1px;
+nav ul li:hover {
+    color: #ccc2a7;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-}
-
-.actions input {
-  border-radius: 20px;
-  border: none;
-  padding: 8px 15px;
-  margin-right: 10px;
-}
-
-.icon {
-  margin: 0 5px;
-  transition: transform 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-  color: #D4C29A;
+.search-and-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .help {
-  margin-left: 15px;
-  font-size: 0.9rem;
-  color: #fff;
+    margin-bottom: 10px;
+    color: white;
 }
 
-footer {
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
+.search-bar {
+    background: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
 }
 
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    margin-left: 5px;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    text-align: left;
-    margin-top: 10px;
-  }
-  .actions {
-    margin-top: 10px;
-    width: 100%;
-  }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-and-icons {
+        align-items: flex-start;
+    }
 }
