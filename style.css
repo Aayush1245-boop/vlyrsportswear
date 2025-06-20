@@ -1,102 +1,76 @@
-
 body {
     margin: 0;
-    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
-    background: white;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
 }
-
-header {
-    background: linear-gradient(45deg, #1a1a1a 50%, #585858 50%);
-    color: #fff;
-    padding: 20px;
+.header {
+    position: sticky;
+    top: 0;
+    background: #444;
+    z-index: 1000;
 }
-
-.header-content {
+.slash-bg {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #111 50%, #666 50%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 25px 40px;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.logo span {
+    color: #ccc2a7;
+}
+.nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+.search-help {
+    display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 10px;
 }
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-.brand-bold {
-    font-weight: 600;
-    color: white;
-}
-
-.brand-light {
-    font-weight: 400;
-    color: #ccc2a7;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0;
-}
-
-nav ul li {
-    margin-right: 20px;
-    cursor: pointer;
-    color: white;
-    transition: color 0.3s;
-}
-
-nav ul li:hover {
-    color: #ccc2a7;
-}
-
-.search-and-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.help {
-    margin-bottom: 10px;
-    color: white;
-}
-
-.search-bar {
-    background: white;
-    border-radius: 30px;
+.search-help input {
     padding: 5px 10px;
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input {
+    border-radius: 15px;
     border: none;
-    outline: none;
-    padding: 5px;
 }
-
-.search-bar button {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    margin-left: 5px;
-    cursor: pointer;
+.icons {
+    color: white;
+}
+.help-link {
+    color: white;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-    .header-content {
+    .container {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    nav ul {
+    .nav {
         flex-direction: column;
-        gap: 10px;
     }
-
-    .search-and-icons {
-        align-items: flex-start;
+    .search-help {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
     }
 }
